@@ -1,0 +1,1 @@
+œcie¿ka serwera (server name) to (localdb) MSSQLLocalDB
