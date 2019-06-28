@@ -1,0 +1,58 @@
+﻿<Window x:Class="BLIK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLIK"
+        mc:Ignorable="d"
+        Title="BLIK" Height="580.197" Width="994.663">
+    <Grid>
+        <Grid x:Name="Ekran_Logowania" Margin="10,10,10,10.4" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button x:Name="Przycisk_Zaloguj" Content="Zaloguj" HorizontalAlignment="Center" Height="40" Margin="389,376,414.2,113.6" VerticalAlignment="Center" Width="160" Click="Przycisk_logowania" FontSize="20"/>
+            <TextBox x:Name="Pobierz_Login" HorizontalAlignment="Left" Height="40" Margin="337,201,0,0" Text="" VerticalAlignment="Top" Width="287" FontSize="20"/>
+            <PasswordBox x:Name="Pobierz_Haslo" Height="40" Margin="337,289,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="287" FontSize="20" RenderTransformOrigin="0.552,-0.002"/>
+            <TextBlock x:Name="Tekst_Login" HorizontalAlignment="Left" Height="40" Margin="160,201,0,0" TextWrapping="Wrap" Text="Podaj Login:" VerticalAlignment="Top" Width="110" FontSize="20" TextAlignment="Center" RenderTransformOrigin="-0.193,0.55"/>
+            <TextBlock x:Name="Tekst_Haslo" HorizontalAlignment="Left" Height="40" Margin="160,289,0,0" TextWrapping="WrapWithOverflow" Text="Podaj Hasło:" VerticalAlignment="Top" Width="110" TextAlignment="Center" FontSize="20" RenderTransformOrigin="-0.029,0.493"/>
+            <TextBlock x:Name="Witamy_Ekran_Logowania" Height="40" Margin="389,36,0,0" TextWrapping="WrapWithOverflow" Text="Witamy!" VerticalAlignment="Top" Width="160" FontSize="20" TextAlignment="Center" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="Tekst_Poprawne_Login"  Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="160,76,0,0" TextWrapping="WrapWithOverflow" Text="Wpisz poprawny login i hasło!" VerticalAlignment="Top" Width="600" FontSize="20" TextAlignment="Center"/>
+            <TextBlock x:Name="Tekst_Puste_Pola_Logowania"  Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="267,116,0,0" TextWrapping="Wrap" Text="Proszę uzupełnić puste pola!" VerticalAlignment="Top" Width="393" FontSize="20" TextAlignment="Center"/>
+            <TextBlock x:Name="Tekst_Niepoprawne_Znaki"  Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="182,156,0,0" TextWrapping="Wrap" Text="Login lub Hasło zawiera zabronione znaki! Jest to: " VerticalAlignment="Top" Width="578" FontSize="20" TextAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="Ekran_Obsluga_Konta" Margin="10,10,10,10.4" Visibility="Collapsed">
+            <Button x:Name="Przycisk_Generuj_Kod_BLIK" Content="Generuj Kod BLIK" HorizontalAlignment="Left" Height="70" Margin="74,50,0,0" VerticalAlignment="Top" Width="220" FontSize="20" Click="Przycisk_Generuj_Kod_BLIK_Click"/>
+            <TextBlock x:Name="Wyswietl_Saldo" HorizontalAlignment="Left" Height="40" Margin="630,143,0,0" TextWrapping="Wrap" Text="Wyświetl Saldo" VerticalAlignment="Top" Width="233" FontSize="20"/>
+            <TextBlock x:Name="Wyswietl_Numer_Konta" HorizontalAlignment="Left" Height="40" Margin="630,188,0,0" TextWrapping="Wrap" Text="Wyświetl Numer Konta" VerticalAlignment="Top" Width="233" FontSize="20"/>
+            <TextBlock x:Name="Wyswietl_Nazwisko" HorizontalAlignment="Left" Height="40" Margin="630,98,0,0" TextWrapping="Wrap" Text="Wyświetl Nazwisko" VerticalAlignment="Top" Width="303" FontSize="20"/>
+            <TextBlock x:Name="Wyswietl_Imie" HorizontalAlignment="Left" Height="40" Margin="630,50,0,0" TextWrapping="Wrap" Text="Wyświetl Imię" VerticalAlignment="Top" Width="303" FontSize="20"/>
+            <TextBlock x:Name="Tekst_Imie" HorizontalAlignment="Left" Height="40" Margin="381,50,0,0" TextWrapping="Wrap" Text="Imię:" VerticalAlignment="Top" Width="160" FontSize="20" TextAlignment="Right"/>
+            <TextBlock x:Name="Tekst_Nazwisko" HorizontalAlignment="Left" Height="40" Margin="381,98,0,0" TextWrapping="Wrap" Text="Nazwisko:" VerticalAlignment="Top" Width="160" FontSize="20" TextAlignment="Right"/>
+            <TextBlock x:Name="Tekst_Saldo" HorizontalAlignment="Left" Height="40" Margin="381,143,0,0" TextWrapping="Wrap" Text="Saldo:" VerticalAlignment="Top" Width="160" TextAlignment="Right" FontSize="20"/>
+            <TextBlock x:Name="Tekst_Numer_Konta" HorizontalAlignment="Left" Height="40" Margin="381,188,0,0" TextWrapping="Wrap" Text="Numer Konta:" VerticalAlignment="Top" Width="160" FontSize="20" TextAlignment="Right"/>
+            <TextBlock x:Name="Tekst_Kod_BLIK" HorizontalAlignment="Left" Height="40" Margin="289,233,0,0" TextWrapping="Wrap" Text="Wygenerowany Kod BLIK:" VerticalAlignment="Top" Width="252" FontSize="20" TextAlignment="Right" RenderTransformOrigin="0.575,-1.25"/>
+            <TextBlock x:Name="Wyswietl_Kod_BLIK" HorizontalAlignment="Left" Height="40" Margin="630,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="259" FontSize="20"/>
+            <Button x:Name="Przycisk_Wyloguj" Content="Wyloguj" HorizontalAlignment="Left" Height="70" Margin="74,166,0,0" VerticalAlignment="Top" Width="220" FontSize="20" Click="Przycisk_wylogowania"/>
+            <TextBlock x:Name="Tekst_Potwierdzenie_Generowania_Kodu_BLIK" Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="43,302,0,0" TextWrapping="Wrap" Text="Operacja przebiegła pomyślnie! Wygenerowany kod jest ważny przez 3 minuty!" VerticalAlignment="Top" Width="789" FontSize="20"/>
+            <TextBlock x:Name="Tekst_Blad_Generowania_Kodu_BLIK" Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="43,382,0,0" TextWrapping="Wrap" Text="Wystąpił błąd podczas generacji! Prosimy spróbować za chwilę!" VerticalAlignment="Top" Width="789" FontSize="20"/>
+            <TextBlock x:Name="Tekst_Potwierdzenie_Transakcji" Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="43,342,0,0" TextWrapping="Wrap" Text="Transakcja przeszła pomyślnie!" VerticalAlignment="Top" Width="789" FontSize="20"/>
+            <TextBlock x:Name="Tekst_Blad_Transakcji" Visibility="Collapsed" HorizontalAlignment="Left" Height="40" Margin="43,421,0,0" TextWrapping="Wrap" Text="Wystąpił błąd podczas transakcji!" VerticalAlignment="Top" Width="789" FontSize="20"/>
+            <TextBlock x:Name="Tekst_Data_Utworzenia_Blik" HorizontalAlignment="Left" Height="40" Margin="438,461,0,0" TextWrapping="Wrap" Text="Data utworzenia kodu BLIK:" VerticalAlignment="Top" Width="290" FontSize="20"/>
+            <TextBlock x:Name="Wyswietl_Data_Utworzenia_Blik" HorizontalAlignment="Left" Height="40" Margin="733,461,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" FontSize="20"/>
+        </Grid>
+        <Grid x:Name="Ekran_Powitalny" Margin="10,10,10,10.4" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button x:Name="Przycisk_Przejdz_Do_Zaloguj" Content="Zaloguj się do swojego konta" HorizontalAlignment="Center" Height="110" Margin="255,218,277.2,201.6" VerticalAlignment="Center" Width="431" FontSize="30" Click="Przycisk_Przejdz_Do_Zaloguj_Click"/>
+            <TextBlock x:Name="Witamy_Ekran_Powitalny" Height="40" Margin="389,36,0,0" TextWrapping="WrapWithOverflow" Text="Witamy!" VerticalAlignment="Top" Width="160" FontSize="30" TextAlignment="Center" HorizontalAlignment="Left"/>
+        </Grid>
+        <Grid x:Name="Ekran_Wylogowania" Margin="10,10,10,10.4" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button x:Name="Przycisk_Powrot_Do_Poczatku" Content="Zaloguj Ponownie" HorizontalAlignment="Center" Height="110" Margin="264,194,268.4,225.6" VerticalAlignment="Center" Width="430" FontSize="30" Click="Przycisk_Powrot_Do_Poczatku_Click"/>
+            <TextBlock x:Name="Tekst_Podziekowanie" Height="129" Margin="120,36,0,0" TextWrapping="WrapWithOverflow" Text="Dziękujemy za skorzystanie z naszych usług i zapraszamy ponownie!" VerticalAlignment="Top" Width="693" FontSize="30" TextAlignment="Center" HorizontalAlignment="Left"/>
+            <Button Name="FileExitMenuItem" Click="FileExitMenuItem_Click" FontSize="30" HorizontalAlignment="Center" Content="Zamknij" Margin="264,342,268.4,77.6" Width="430" Height="110" VerticalAlignment="Center"></Button>
+        </Grid>
+        <Grid x:Name="Ekran_Potwierdzenia_Transakcji" Margin="10,10,10,10.4" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button x:Name="Przycisk_Potwierdz_Transakcje" Content="Potwierdź" HorizontalAlignment="Center" Height="60" Margin="276,325,527.2,144.6" VerticalAlignment="Center" Width="160" FontSize="20" Click="Przycisk_Potwierdz_Transakcje_Click"/>
+            <Button x:Name="Przycisk_Odrzuc_Transakcje" Content="Odrzuć" HorizontalAlignment="Center" Height="60" Margin="492,325,311.2,144.6" VerticalAlignment="Center" Width="160" FontSize="20" Click="Przycisk_Odrzuc_Transakcje_Click"/>
+            <TextBlock x:Name="Wyswietl_Kwota_Wyplaty" HorizontalAlignment="Left" Height="42" Margin="326,160,0,0" TextWrapping="Wrap" Text="Kwota" VerticalAlignment="Top" Width="284" FontSize="20" TextAlignment="Center"/>
+            <TextBlock x:Name="Tekst_Kowta_Wyplaty" HorizontalAlignment="Left" Height="47" Margin="77,108,0,0" TextWrapping="Wrap" Text="Kwota Wypłaty:" VerticalAlignment="Top" Width="780" FontSize="20" TextAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</Window>
