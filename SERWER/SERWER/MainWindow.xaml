@@ -1,0 +1,16 @@
+﻿<Window x:Class="SERWER.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SERWER"
+        mc:Ignorable="d"
+        Title="SERWER" Height="524.46" Width="1005.576" FontSize="20">
+    <Grid>
+        <Button x:Name="Start_Serwer" Content="Start" HorizontalAlignment="Left" Height="74" Margin="110,36,0,0" VerticalAlignment="Top" Width="300"  Click="Start_Serwer_Click"/>
+        <Button x:Name="Stop_Serwer" Content="Zakończ i Zamknij" HorizontalAlignment="Left" Height="74" Margin="590,36,0,0" VerticalAlignment="Top" Width="300" Click="Stop_Serwer_Click"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="30,115,30.2,72.2" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="Komunikat"  Height="Auto" Text="" VerticalAlignment="Top"  />
+        </ScrollViewer>
+    </Grid>
+</Window>
